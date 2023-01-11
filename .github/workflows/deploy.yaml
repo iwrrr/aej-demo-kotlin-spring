@@ -1,0 +1,20 @@
+name: Heroku deployment
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: "0f9e4d48-bff6-40e9-92fd-56e887200575"
+          heroku_app_name: "aej-ojol"
+          heroku_email: "iryadev15@gmail.com"
