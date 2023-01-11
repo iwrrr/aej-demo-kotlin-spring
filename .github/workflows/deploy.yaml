@@ -15,6 +15,6 @@ jobs:
           java-version: '17'
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
-          heroku_api_key: "0f9e4d48-bff6-40e9-92fd-56e887200575"
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "aej-ojol"
           heroku_email: "iryadev15@gmail.com"

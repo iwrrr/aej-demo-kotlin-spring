@@ -12,7 +12,7 @@ class DemoController {
     fun ping(): BaseResponse<Any> {
         return BaseResponse(
             status = true,
-            message = "success",
+            message = "Success",
             data = "Test"
         )
     }
